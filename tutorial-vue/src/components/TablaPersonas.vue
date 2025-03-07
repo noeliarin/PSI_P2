@@ -101,18 +101,8 @@
     name: 'TablaPersonas',
   });
 
-
-
-
   const props = defineProps({
-    personas: { 
-      type: Array, 
-      default: () => [
-        { id: 1, nombre: 'Jon', apellido: 'Nieve', email: 'jon@email.com' },
-        { id: 2, nombre: 'Tyrion', apellido: 'Lannister', email: 'tyrion@email.com' },
-        { id: 3, nombre: 'Daenerys', apellido: 'Targaryen', email: 'daenerys@email.com' }
-      ]
-    }
+    personas: {type: Array, default: []},
   });
   const emit = defineEmits(['actualizar-persona', 'delete-persona']);
 
