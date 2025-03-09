@@ -27,7 +27,7 @@
 import TablaPersonas from '@/components/TablaPersonas.vue'
 import FormularioPersona from '@/components/FormularioPersona.vue'
 import { ref, onMounted } from 'vue';
-import { useCounterStore } from '@/stores/counter'; // usar en método correspondiente
+import { useCounterStore } from '@/stores/counter'; 
 
 defineOptions({
   name: 'app',
@@ -91,7 +91,6 @@ const actualizarPersona = async (id, personaActualizada) => {
 };
 
 
-// Fetch data when the component is mounted
 onMounted(() => {
   listadoPersonas();
 });
