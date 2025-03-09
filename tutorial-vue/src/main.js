@@ -4,13 +4,13 @@ import App from './App.vue'
 
 import './assets/main.css'
 
-const app = createApp(App)
+const myapp = createApp(App)
+const pinia = createPinia()
 
-app.use(createPinia())
+myapp.use(pinia)
+myapp.mount('#app')
 
-app.mount('#app')
-
-app.config.devtools = true;
+myapp.config.devtools = true;
 
 import "../node_modules/bootstrap/dist/js/bootstrap.js";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'

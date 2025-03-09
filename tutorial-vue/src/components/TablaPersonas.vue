@@ -104,6 +104,8 @@
   const props = defineProps({
     personas: {type: Array, default: []},
   });
+
+  
   const emit = defineEmits(['actualizar-persona', 'delete-persona']);
 
   const editando = ref(null);
