@@ -28,10 +28,9 @@ load_dotenv(env_path)
 SECRET_KEY = 'django-insecure-45iykz2+ca*au&(-j@7140z40p6j55)$=q!(y1c7ig*9j@-eeg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
 
 NEON_URL = os.getenv('NEON_URL')
 POSTGRESQL_URL = os.getenv('POSTGRESQL_URL')
@@ -103,7 +102,6 @@ DATABASES = {
     'default': dj_database_url.config(default=NEON_URL)
 }
 
-ALLOWED_HOSTS = ['*']
 
 
 # Password validation
