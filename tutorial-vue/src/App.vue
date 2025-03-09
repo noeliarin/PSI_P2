@@ -29,6 +29,9 @@ import FormularioPersona from '@/components/FormularioPersona.vue'
 import { ref, onMounted } from 'vue';
 import { useCounterStore } from '@/stores/counter'; 
 
+const myVar = import.meta.env.VITE_DJANGOURL;
+console.log(myVar);
+
 defineOptions({
   name: 'App',
 });
@@ -38,7 +41,7 @@ const store = useCounterStore();
 
 const listadoPersonas = async () => {
   try {
-    const response = await fetch('http://localhost:8001/api/v1/personas/');
+    const response = await fetch('`${myVar}/api/v1/personas/');
     personas.value = await response.json();
   } catch (error) {
     console.error(error);
@@ -47,7 +50,7 @@ const listadoPersonas = async () => {
 
 const agregarPersona = async (persona) => {
   try {
-    const response = await fetch('http://localhost:8001/api/v1/personas/', {
+    const response = await fetch('`${myVar}/api/v1/personas/', {
       method: 'POST',
       body: JSON.stringify(persona),
       headers: { 'Content-type': 'application/json; charset=UTF-8' },
@@ -64,7 +67,7 @@ const agregarPersona = async (persona) => {
 
 const eliminarPersona = async (persona_id) => {
   try {
-    await fetch('http://localhost:8001/api/v1/personas/' + persona_id + '/', {
+    await fetch('`${myVar}/api/v1/personas/' + persona_id + '/', {
       method: "DELETE"
     });
 
@@ -77,7 +80,7 @@ const eliminarPersona = async (persona_id) => {
 
 const actualizarPersona = async (id, personaActualizada) => {
   try {
-    const response = await fetch(`http://localhost:8001/api/v1/personas/${personaActualizada.id}/`, {
+    const response = await fetch(`${myVar}/api/v1/personas/${personaActualizada.id}/`, {
       method: 'PUT',
       body: JSON.stringify(personaActualizada),
       headers: { 'Content-type': 'application/json; charset=UTF-8' },
