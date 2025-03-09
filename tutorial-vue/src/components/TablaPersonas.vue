@@ -102,7 +102,7 @@
   });
 
   const props = defineProps({
-    personas: {type: Array, default: []},
+    personas: {type: Array, default: () => []},
   });
 
   

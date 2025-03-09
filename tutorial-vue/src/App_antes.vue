@@ -1,7 +1,12 @@
 <template>
-  <div id="app" class="container">
+  <div
+    id="app"
+    class="container"
+  >
     <div class="row">
-      <div class="col-md-12"><h1>Personas</h1></div>
+      <div class="col-md-12">
+        <h1>Personas</h1>
+      </div>
     </div>
     <div class="row">
       <div class="col-md-12">
@@ -22,7 +27,7 @@ import FormularioPersona from '@/components/FormularioPersona.vue'
 import { ref } from 'vue';
 
 defineOptions({
-  name: 'app',
+  name: 'App',
 });
 
 const personas = ref([{ id: 1, nombre: 'Jon', apellido: 'Nieve', email: 'jon@email.com' },

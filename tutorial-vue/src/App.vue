@@ -9,16 +9,16 @@
         <h1>Personas</h1>
       </div>
     </div>
-      <div class="row">
-        <div class="col-md-12">
-          <formulario-persona @add-persona="agregarPersona" />
-          <tabla-personas
-            :personas="personas"
-            @delete-persona="eliminarPersona"
-            @actualizar-persona="actualizarPersona"
-          />
-        </div>
+    <div class="row">
+      <div class="col-md-12">
+        <formulario-persona @add-persona="agregarPersona" />
+        <tabla-personas
+          :personas="personas"
+          @delete-persona="eliminarPersona"
+          @actualizar-persona="actualizarPersona"
+        />
       </div>
+    </div>
     <p>Count is {{ store.count }}</p>
   </div>
 </template>
@@ -30,7 +30,7 @@ import { ref, onMounted } from 'vue';
 import { useCounterStore } from '@/stores/counter'; 
 
 defineOptions({
-  name: 'app',
+  name: 'App',
 });
 
 const personas = ref([]);

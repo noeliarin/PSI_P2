@@ -54,6 +54,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware', 
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -64,8 +65,15 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_ALLOW_ALL = False
+
+
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:5173',  
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "https://psi-p2-7zra.onrender.com",  # Tu frontend en Render
+    "http://localhost:5173",  # Para desarrollo local
 ]
 
 
