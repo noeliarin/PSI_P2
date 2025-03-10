@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-45iykz2+ca*au&(-j@7140z40p6j55)$=q!(y1c7ig*9j@-eeg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*').split(',')
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost,127.0.0.1").replace(" ", "").split(",")
 
 NEON_URL = os.getenv('NEON_URL')
 POSTGRESQL_URL = os.getenv('POSTGRESQL_URL')
