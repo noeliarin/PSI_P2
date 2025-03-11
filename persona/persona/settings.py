@@ -73,6 +73,8 @@ CORS_ORIGIN_WHITELIST = [
 CORS_ALLOWED_ORIGINS = [
     "https://psi-p2-7zra.onrender.com",  
     "http://localhost:5173",
+    "https://psi-p2-persona-rb0q.onrender.com",
+
 ]
 
 
