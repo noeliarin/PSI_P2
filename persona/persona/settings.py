@@ -28,7 +28,7 @@ load_dotenv(env_path)
 SECRET_KEY = 'django-insecure-45iykz2+ca*au&(-j@7140z40p6j55)$=q!(y1c7ig*9j@-eeg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost,127.0.0.1").replace(" ", "").split(",")
 
@@ -71,8 +71,8 @@ CORS_ORIGIN_WHITELIST = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://psi-p2-7zra.onrender.com",  # Tu frontend en Render
-    "http://localhost:5173",  # Para desarrollo local
+    "https://psi-p2-7zra.onrender.com",  
+    "http://localhost:5173",
 ]
 
 
@@ -149,7 +149,7 @@ USE_TZ = True
 
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Ruta donde se almacenarán los archivos estáticos
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

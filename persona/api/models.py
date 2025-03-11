@@ -5,7 +5,6 @@ class Persona(models.Model):
     apellido = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
 
-    # Meta para ordenar por id de forma creciente
     class Meta:
         ordering = ['id']
 

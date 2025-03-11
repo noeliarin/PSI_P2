@@ -28,7 +28,6 @@ from api.views import PersonaViewSet
 
 router = routers.DefaultRouter()
 
-# En el router vamos agnadiendo los endpoints a los viewsets
 router.register('personas', PersonaViewSet)
 
 urlpatterns = [

@@ -95,7 +95,7 @@ const actualizarPersona = async (id, personaActualizada) => {
 
 onMounted(() => {
   listadoPersonas();
-  console.log('La URL de la API es:', apiUrl); // Aquí imprimes la URL de la API en la consola
+  //console.log('La URL de la API es:', apiUrl); 
 });
 </script>
 

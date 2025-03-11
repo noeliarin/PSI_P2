@@ -117,7 +117,6 @@
     procesando.value = true;
     resetEstado();
   
-    // Comprobamos la presencia de errores
     if (nombreInvalido.value || apellidoInvalido.value || emailInvalido.value) {
       error.value = true;
       return;
@@ -126,7 +125,6 @@
     emit('add-persona', persona.value);
     nombre.value.focus();
   
-    // Limpiamos el formulario
     persona.value = {
       nombre: '',
       apellido: '',
@@ -143,7 +141,6 @@
     error.value = false;
   };
   
-  //Computed
   const nombreInvalido = computed(() => persona.value.nombre.length < 1);
   const apellidoInvalido = computed(() => persona.value.apellido.length < 1);
   const emailInvalido = computed(() => persona.value.email.length < 1);
